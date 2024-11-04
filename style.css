@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(232, 242, 250);
+}
+
+.container .mobile {
+    background-color: white;
+    height: 35rem;
+    width: 20rem;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.container .mobile .navigation {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: .2rem 1.5rem;
+    border-top: 1px solid rgb(229, 228, 228);
+    background-color: white;
+}
+
+.container .mobile .navigation i {
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: rgb(49, 62, 69);
+}
+
+
+.container .mobile .navigation .task-bar i {
+    font-size: 1.5rem;
+    background-color: rgb(15, 152, 236);
+    color: white;
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid rgb(163, 209, 237);
+    transition: .3s;
+    z-index: 2222;
+}
+
+.container .mobile .navigation .task-bar.rotate i {
+    transform: rotate(-45deg);
+
+}
+
+.container .mobile .menu {
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+    background-color: rgb(15, 152, 236);
+    /* background-color: rgb(40, 92, 138); */
+    border-radius: 50px;
+    margin-top: .5rem;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .3s;
+
+}
+
+
+
+.container .mobile.hide-menu .menu {
+    animation: hideBar .7s forwards;
+}
+
+@keyframes hideBar {
+
+    0%,
+    30% {
+        bottom: 5rem;
+        width: 65%;
+    }
+
+    70% {
+        width: 5rem;
+    }
+
+    100% {
+        width: 2.5rem;
+        bottom: 1rem;
+    }
+
+}
+
+.container .mobile.show-menu .menu {
+    animation: showBar 1s forwards;
+}
+
+
+
+@keyframes showBar {
+
+    40% {
+        bottom: 5rem;
+        width: 2.5rem;
+    }
+
+    100% {
+        width: 65%;
+        bottom: 5rem;
+    }
+
+}
+
+.container .mobile .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    transition: .3s;
+    font-size: 17px;
+}
+
+.container .mobile .menu i {
+    cursor: pointer;
+    background-color: rgb(200, 225, 241);
+    height: 1.8rem;
+    width: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.container .mobile .menu i.color {
+    background-color: transparent;
+}
+
+.container .mobile .menu i:hover {
+
+    transform: scale(1.1);
+}
+
+@media (max-width:700px) {
+    .container .mobile {
+        border-radius: none;
+        height: 100vh;
+        width: 100%;
+
+    }
+
+    .container .mobile .navigation {
+        padding: .7rem 1.5rem;
+    }
+
+
+
+
+    @keyframes hideBar {
+
+        0%,
+        30% {
+            bottom: 8rem;
+            width: 65%;
+        }
+
+        70% {
+            width: 5rem;
+        }
+
+        100% {
+            width: 4rem;
+            bottom: 1rem
+        }
+
+    }
+
+    @keyframes showBar {
+
+        40% {
+            bottom: 8rem;
+            width: 4rem;
+        }
+
+        100% {
+            width: 65%;
+            bottom: 8rem;
+        }
+
+    }
+
+
+}
