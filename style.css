@@ -171,7 +171,7 @@
 
         0%,
         30% {
-            bottom: 8rem;
+            bottom: 6.5rem;
             width: 65%;
         }
 
@@ -189,7 +189,7 @@
     @keyframes showBar {
 
         40% {
-            bottom: 8rem;
+            bottom: 6.5rem;
             width: 4rem;
         }
 
@@ -199,6 +199,12 @@
         }
 
     }
-
+    .container .mobile .menu i{
+        height: 2.2rem;
+    width: 2.2rem;
+    }
+.container .mobile {
+   border-radius:none;
+}
 
 }
